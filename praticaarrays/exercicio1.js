@@ -1,5 +1,3 @@
-// EXERCICIO NAO COMPLETADO
-
 import MeuArray from "../teoria/meuArray.js";
 
 const tarefas = new MeuArray();

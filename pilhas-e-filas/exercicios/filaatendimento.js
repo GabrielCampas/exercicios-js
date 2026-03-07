@@ -1,8 +1,4 @@
 export default class Atendimento {
-    // clientes entram na fila e são atendidos em ordem de chegada
-    // a cada iteração um cliente deve ser removido da fila e exibido no console
-    // novos clientes podem ser adicionados aleatoriamente
-
     // indice do inicio da fila
     #inicio = 0;
 
@@ -14,29 +10,37 @@ export default class Atendimento {
 
     // funcao de fila vazia
     // verifica se a fila está vazia
-    vazia(){ 
+    vazia() {
         this.#final === this.#inicio;
     }
 
     // funcao do tamanho da fila
     // calcula o diferença entre final e inicio
-    tamanhofila(){
+    tamanhofila() {
         this.#final - this.#inicio;
     }
 
     // adicionando ao final da fila
-    enqueue(pessoa){
+    enqueue(pessoa) {
         // colocando a pessoa no final da fila
         this.#clientes[this.#final] = pessoa;
 
         // incrementando o indice do fim da fila
-        this.final++;
+        this.#final++;
+    }
+
+    // mostarndo a fila inteira
+    filaCompleta() {
+        //return this.enqueue[this.#clientes];
+
+        // filtrando o array pra retornar apenas os clientes
+        return this.#clientes.filter(cliente => cliente !== undefined);
     }
 
     // mostrando o primeiro da fila sem remove-lo
-    front(){
+    front() {
         // caso fila esteja vazia
-        if (this.vazia()){
+        if (this.vazia()) {
             return `Não tem ninguém na fila.`;
         }
 
@@ -45,7 +49,12 @@ export default class Atendimento {
     }
 
     // removendo o primeiro da fila
-    dequeue(){
+    dequeue() {
+        // caso fila esteja vazia
+        if (this.vazia()) {
+            return `Não tem ninguém na fila.`;
+        }
+
         // obtendo o primeiro elemento
         const cliente = this.#clientes[this.#inicio];
 

@@ -1,4 +1,4 @@
-## 💻 Mais alguns exercícios para fixação em JavaScript, utilizando as aulas de Orientação a Objetos e Arrays.
+## 💻 Mais alguns exercícios para fixação em JavaScript, sobre Orientação a Objetos (POO), Arrays, Pilhas e Filas.
 
 <div align="center">
     <img height="100" widht="100" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"/>

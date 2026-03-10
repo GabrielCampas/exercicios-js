@@ -1,32 +1,34 @@
 import MinhaPilha from "../pilha.js";
 
-// -- Incompleto --
-
 // Introduçao
-console.log(`\nTorre de Feitiços.`);
+console.log(`==== Torre de Feitiços. ====`);
 
 const feitico = new MinhaPilha();
 //const leia = require('readline-sync');
 
 // Feitiços da pilha
-feitico.adicionar("Bola de Fogo");
-feitico.adicionar("Contra-feitiço");
-feitico.adicionar("Maldição");
-feitico.adicionar("Cura");
+feitico.adicionar(`Bola de Fogo`);
+feitico.adicionar(`Contra-Feitiço`);
+feitico.adicionar(`Maldição`);
+feitico.adicionar(`Cura`);
 
 // Mostrando feitiços
 console.table(feitico.tabela());
 
-// Removendo feitiço do topo
-feitico.remover();
-console.log(`\nO feitiço "${feitico.remover(4)}" foi guardado em outra torre!`);
+// caso esteja vazio
+if (feitico.estaVazio()){
+    console.log(`A torre está vazia.`);
+    // termina a execução
+    process.exit(1);
+} else {
+    console.log(`Ainda restam ${feitico.tamanhoPilha()} feitiços na torre.`);
+}
 
-console.table(feitico.tabela());
+// Removendo feitiço do topo
+const removido = feitico.remover();
+console.log(`O feitiço "${removido}" foi guardado em outra torre!`);
 
 // Vendo qual feitiço está no topo sem remover
-console.log(`Agora o feitiço do topo é: ""!`);
+console.log(`\nAgora o feitiço do topo é: "${feitico.topo()}"!`);
 
-// verificando se não existem mais feitiços na pilha
-if (feitico){
-
-}
+console.table(feitico.tabela());

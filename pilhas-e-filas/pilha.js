@@ -17,7 +17,7 @@ export default class MinhaPilha {
     remover() {
         // Se a pilha estiver vazia, retorna undefined
         if (this.#tamanho === 0) {
-            return undefined;
+            return null;
         }
 
         // Pega o item no topo da pilha

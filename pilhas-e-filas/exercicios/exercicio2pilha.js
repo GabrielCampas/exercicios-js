@@ -1,4 +1,4 @@
-import Bau from "./bauexercicio2.js";
+import Bau from "./bauexercicio2pilha.js";
 
 // Introduçao
 console.log(`\nBaú de Tesouros do Barbarruiva.`);
